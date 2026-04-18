@@ -5,6 +5,7 @@ App web de una calculadora con flask
 
 from flask import Flask, render_template, request
 from .calculadora import sumar, restar, multiplicar, dividir
+import os
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-only-insecure-key")
