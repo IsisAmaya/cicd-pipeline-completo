@@ -40,12 +40,14 @@ def index():
 
     return render_template("index.html", resultado=resultado)
 
+
 @app.route("/health", methods=["GET"])
-"""
-Verificar status app
-"""
 def health():
+    """
+    Verificar status app
+    """
     return "OK", 200
+
 
 if __name__ == "__main__":  # pragma: no cover
     app.run(debug=False, port=5000, host="127.0.0.1")
