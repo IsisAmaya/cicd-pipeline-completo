@@ -46,7 +46,7 @@ def potencia(a, b):
     return a**b
 
 
-def raiz_cuadrada(a, b):
+def raiz_cuadrada(a):
     """
     Raiz cuadradada de a
     """

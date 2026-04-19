@@ -5,7 +5,14 @@ App web de una calculadora con flask
 
 import os
 from flask import Flask, render_template, request
-from .calculadora import sumar, restar, multiplicar, dividir, potencia, raiz_cuadrada
+from .calculadora import (
+    sumar,
+    restar,
+    multiplicar,
+    dividir,
+    potencia,
+    raiz_cuadrada,
+)
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-only-insecure-key")
@@ -34,7 +41,7 @@ def index():
             elif operacion == "potencia":
                 resultado = potencia(num1, num2)
             elif operacion == "raiz cuadrada":
-                resultado = raiz_cuadrada(num1, num2)
+                resultado = raiz_cuadrada(num1)
             else:
                 resultado = "Operación no válida"
         except ValueError:
