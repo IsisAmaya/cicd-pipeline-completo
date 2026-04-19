@@ -3,6 +3,8 @@
 Funciones basicas de una calculadora
 """
 
+import math
+
 AUTORES = "icamayaa@eafit.edu.co"
 
 
@@ -35,3 +37,17 @@ def dividir(a, b):
     if b == 0:
         raise ZeroDivisionError("No se puede dividir por cero")
     return a / b
+
+
+def potencia(a, b):
+    """
+    Potencia, a elevado a b
+    """
+    return a**b
+
+
+def raiz_cuadrada(a, b):
+    """
+    Raiz cuadradada de a
+    """
+    return math.sqrt(a)
